@@ -1,12 +1,16 @@
-﻿## Ten przypisuje uprawnienia Microsoft Teams najbardziej restrykcyjne
-$Users = Import-Csv -Path "C:\Users\bartu\Documents\uczniowieid.csv"   
+﻿# Grant User Perrmisions Policy Package
+## input: users-file.csv
+## result users provided in users_file.csv had granted UserPolicyPackage provided below in variable
 
+$Users = Import-Csv -Path "C:\..\users_file.csv"
 $count = 1;
+
 foreach ($User in $Users)            
 {
-        $UserID = $User.'ID' #mail z domeną @onmicrosoft
-        $PolicyName = "Education_PrimaryStudent"
+        $UserID = $User.'ID' #mail with XXX@domain.onmicrosoft.com / or your
+        $PolicyName = "Education_PrimaryStudent" #Name of Package
         Grant-CsUserPolicyPackage -Identity $Userid -PackageName $PolicyName
-        $count/156
+
+        $count/156 # show percentage if you want
         $count += 1
 }
