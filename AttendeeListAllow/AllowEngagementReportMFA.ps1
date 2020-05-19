@@ -4,5 +4,5 @@
 
 Set-ExecutionPolicy RemoteSigned
 Import-Module SkypeOnlineConnector
-$sfboSession = New-CsOnlineSession
+New-CsOnlineSession
 Set-CSTeamsMeetingPolicy -Identity Global -AllowEngagementReport "Enabled"
