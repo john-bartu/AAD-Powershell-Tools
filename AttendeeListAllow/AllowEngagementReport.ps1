@@ -2,6 +2,8 @@
 # Standard Authentication
 ## Allow download Attendee during MS Teams meeting
 
+# NEED TO RUN POWERSHELL AS ADMINISTRATOR
+
 Set-ExecutionPolicy RemoteSigned
 $credential = Get-Credential
 Import-Module SkypeOnlineConnector

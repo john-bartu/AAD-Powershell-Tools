@@ -2,6 +2,8 @@
 # When Multifactor Authentication for admins is turned on
 ## Allow download Attendee during MS Teams meeting
 
+# NEED TO RUN POWERSHELL AS ADMINISTRATOR
+
 Set-ExecutionPolicy RemoteSigned
 Import-Module SkypeOnlineConnector
 New-CsOnlineSession
